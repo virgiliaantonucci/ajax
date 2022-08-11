@@ -55,14 +55,20 @@ function SignUp() {
                 name='username' 
                 value={username} 
                 onChange={handleChange}
+                autoComplete="on"
             />
+        </FormControl>
+        <FormControl>
             <Input
                 placeholder="Password" 
                 type='password' 
                 name='password' 
                 value={password} 
                 onChange={handleChange}
+                autoComplete="on"
             />
+        </FormControl>
+        <FormControl>
             <Button
                 type="submit"
             >

@@ -44,14 +44,20 @@ function Login({ onLogin }) {
         id="username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+        autoComplete="on"
       />
+      </FormControl>
+      <FormControl>
       <Input
         placeholder="Password" 
         type="password"
         id="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        autoComplete="on"
       />
+      </FormControl>
+      <FormControl>
       <Button type="submit">
         Login
       </Button>

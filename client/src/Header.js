@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 
 function Header({ user, onLogout }) {
   function handleLogout() {

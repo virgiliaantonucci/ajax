@@ -47,7 +47,7 @@ function User( { user, deleteUser } ) {
 
     let userScreen;
     if (user) {
-        const { username, password } = user
+        const { username } = user
         userScreen =             
             <CardContent className="card-content">
                 <Typography className="card-desc" variant="subtitle1">{`Username: ${username}`}</Typography>
