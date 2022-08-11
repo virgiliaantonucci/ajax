@@ -6,6 +6,7 @@ import User from "./User.js";
 import SignUp from './Signup.js';
 import Header from "./Header.js";
 import UserNav from "./UserNav.js";
+import Home from "./Home.js";
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
        <Route path="/login" element={<Login onLogin={handleLogin} />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/user" element={<User user={user} deleteUser={deleteUser} />} />
+        <Route exact path="/" element={<Home user={user}/>} />
        </Routes>
     </div>
   );

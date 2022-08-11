@@ -20,7 +20,7 @@ function Home({ user }) {
 
   return (
     <div>
-      <h2>learn a language</h2> 
+      <h2>AJAX</h2> 
       <Grid container spacing={2}>
         {/* {recipes.map((recipe) => (
            <Grid item xs={6} key={recipe.id}>

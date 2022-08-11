@@ -22,6 +22,12 @@ function Header({ user, onLogout }) {
           <p>Welcome, {user.username}!</p>
           <Button variant="outlined" style={{color:"#000000"}} onClick={handleLogout}>Logout
           </Button>
+          <br>
+          </br>
+          <Button variant="outlined" style={{color:"#000000"}}>Greek to English
+          </Button>
+          <Button variant="outlined" style={{color:"#000000"}}>English to Greek
+          </Button>
         </div>
       ) : (
         <Link to="/login">
