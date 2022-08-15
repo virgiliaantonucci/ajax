@@ -1,11 +1,22 @@
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
+import {Routes, Route, useNavigate} from 'react-router-dom';
 
 function Header({ user, onLogout }) {
   function handleLogout() {
     fetch("/logout", {
       method: "DELETE",
     }).then(() => onLogout());
+  }
+
+  const navigate = useNavigate();
+
+  function handleGreek() {
+    navigate('/grlevels');
+  }
+
+  function handleEnglish() {
+    navigate('/englevels');
   }
 
   return (
@@ -24,9 +35,9 @@ function Header({ user, onLogout }) {
           </Button>
           <br>
           </br>
-          <Button variant="outlined" style={{color:"#000000"}}>Greek to English
+          <Button variant="outlined" style={{color:"#000000"}} onClick={handleGreek}>Greek to English
           </Button>
-          <Button variant="outlined" style={{color:"#000000"}}>English to Greek
+          <Button variant="outlined" style={{color:"#000000"}} onClick={handleEnglish}>English to Greek
           </Button>
         </div>
       ) : (

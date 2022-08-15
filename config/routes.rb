@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :levels
+  resources :gr_levels
+  resources :eng_levels
   resources :users
   
   # Routing logic: fallback requests for React Router.
