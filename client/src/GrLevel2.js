@@ -5,7 +5,7 @@ function GrLevel2() {
     const [levelData, setLevelData] = useState({});
 
     useEffect(() => {
-        fetch("/levels?name=Level_1").then((response) => {
+        fetch("/levels?name=Level_2").then((response) => {
         if (response.ok) {
             response.json().then((client) => {
             setLevelData(client);

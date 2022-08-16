@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
-function EngLevel1() {
+function EngLevel2() {
 
     const [levelData, setLevelData] = useState({});
 
     useEffect(() => {
-        fetch("/levels?name=Level_1").then((response) => {
+        fetch("/levels?name=Level_2").then((response) => {
         if (response.ok) {
             response.json().then((client) => {
             setLevelData(client);
@@ -21,4 +21,4 @@ function EngLevel1() {
         console.log("hi")
     )
 }
-export default EngLevel1
+export default EngLevel2

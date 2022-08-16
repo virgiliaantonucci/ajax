@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 
 function EngLevel1() {
 
+    const [data, setData] = useState({});
+
     const [levelData, setLevelData] = useState({});
 
     useEffect(() => {
-        fetch("/levels?name=Level_1").then((response) => {
+        fetch("/levels").then((response) => {
         if (response.ok) {
             response.json().then((client) => {
             setLevelData(client);
@@ -17,8 +19,25 @@ function EngLevel1() {
         });
     }, []);
 
+    useEffect(() => {
+        fetch("/englevels").then((response) => {
+        if (response.ok) {
+            response.json().then((client) => {
+            setData(client);
+            console.log(client);
+            });
+        } else {
+            console.log("Not rendering!");
+        }
+        });
+    }, []);
+
     return(
-        console.log("hi")
+        <div>
+            <h2>
+                {levelData.name}
+            </h2>
+        </div>
     )
 }
 export default EngLevel1

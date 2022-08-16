@@ -12,5 +12,8 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
-
+  get "/levels", to: "levels#index"
+  #get "/levels", to: "levels#show"
+  get "/englevels", to: "eng_levels#index"
+  get "/grlevels", to: "gr_levels#index"
 end
