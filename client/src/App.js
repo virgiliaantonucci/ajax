@@ -9,6 +9,9 @@ import UserNav from "./UserNav.js";
 import Home from "./Home.js";
 import GrLevels from "./GrLevels"
 import EngLevels from "./EngLevels"
+import GrLevel1 from "./GrLevel1"
+import GrLevel2 from "./GrLevel2"
+import GrLevel3 from "./GrLevel3"
 import EngLevel1 from "./EngLevel1"
 import EngLevel2 from "./EngLevel2"
 import EngLevel3 from "./EngLevel3"
@@ -58,9 +61,9 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/user" element={<User user={user} deleteUser={deleteUser} />} />
         <Route path="/grlevels" element={<GrLevels user={user}/>} />
-        <Route path="/grlevels/grlevel1" element={<GrLevels user={user}/>} />
-        <Route path="/grlevels/grlevel2" element={<GrLevels user={user}/>} />
-        <Route path="/grlevels/grlevel3" element={<GrLevels user={user}/>} />
+        <Route path="/grlevels/grlevel1" element={<GrLevel1 user={user}/>} />
+        <Route path="/grlevels/grlevel2" element={<GrLevel2 user={user}/>} />
+        <Route path="/grlevels/grlevel3" element={<GrLevel3 user={user}/>} />
         <Route path="/englevels" element={<EngLevels user={user}/>} />
         <Route path="/englevels/englevel1" element={<EngLevel1 user={user}/>} />
         <Route path="/englevels/englevel2" element={<EngLevel2 user={user}/>} />
