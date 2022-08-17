@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
+  #delete "/delete", to: "user#destroy"
   get "/levels", to: "levels#index"
   #get "/levels", to: "levels#show"
   get "/englevels", to: "eng_levels#index"

@@ -35,8 +35,14 @@ function EngLevel1() {
     return(
         <div>
             <h2>
-                {levelData.name}
+                {levelData[0].name}
             </h2>
+            <p>
+                {data[0].walkthru}
+            </p>
+            <form>
+                <input type="text" />
+            </form>
         </div>
     )
 }
