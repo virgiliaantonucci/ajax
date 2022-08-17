@@ -1,5 +1,5 @@
 class Level < ApplicationRecord
-    belongs_to :grlevels, optional: true
-    belongs_to :englevels, optional: true
+    belongs_to :gr_level, optional: true
+    belongs_to :eng_level, optional: true
 
 end
