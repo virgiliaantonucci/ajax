@@ -23,20 +23,16 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("/me").then((response) => {
-      if (response.ok) {
-        response.json().then((client) => {
-          setUser(client);
-          console.log(client);
-        });
-      } else {
-        console.log("Not rendering!");
-      }
-    });
+    const loggedInUser = localStorage.getItem("user")
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser)
+      setUser(foundUser)
+    }
   }, []);
 
     function handleLogin(user) {
       setUser(user);
+      localStorage.setItem("user", JSON.stringify(user))
       console.log(user)
     }
   
@@ -44,6 +40,7 @@ function App() {
       navigate("/");
       setUser(null);
       console.log(null)
+      localStorage.clear()
     }
 
     function deleteUser() {

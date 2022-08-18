@@ -35,10 +35,10 @@ function EngLevel1() {
     return(
         <div>
             <h2>
-                {levelData[0].name}
+                {levelData.length>0 ? levelData[0].name : ""}
             </h2>
             <p>
-                {data[0].walkthru}
+                {data.length>0 ? data[0].walkthru : ""}
             </p>
             <form>
                 <input type="text" />
