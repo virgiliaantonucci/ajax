@@ -48,11 +48,26 @@ function EngLevel1() {
 
     function compare(e) {
        e.preventDefault()
-        console.log(grData.includes(answer));
+       if (document.getElementById('pp')) {
+            document.getElementById('pp').remove()
+        }
+
+        const result = document.createElement("p");
+        result.setAttribute('id','pp');
+        let result2 = ''
+        const element = document.getElementById("div1");
+        if (grData.includes(answer)) {
+            result2 = "Correct!"
+        }
+        else{
+            result2 = "Incorrect!"
+        }
+        result.innerText = result2
+        element.appendChild(result)
     }
 
     return(
-        <div>
+        <div id="div1">
             <h2>
                 {levelData.length>0 ? levelData[0].name : ""}
             </h2>
