@@ -51,15 +51,15 @@ function User( { user, deleteUser } ) {
         userScreen =             
             <CardContent className="card-content">
                 <Typography className="card-desc" variant="subtitle1">{`Username: ${username}`}</Typography>
-                <Box sx={{ p: 1 }}>
+                {/* <Box sx={{ p: 1 }}>
                     <Button><Link to={`/user/edit`} className="button">Edit Profile</Link></Button>
-                </Box>
-                <Box sx={{ p: 1 }}>
+                </Box> */}
+                {/* <Box sx={{ p: 1 }}>
                 <Button><Link to={`/user/recipes`} className="button">My Recipes</Link></Button>
                 </Box>
                 <Box sx={{ p: 1 }}>
                 <Button><Link to={`/user/reviews`} className="button">My Reviews</Link></Button>
-                </Box>
+                </Box> */}
                 <Button onClick={deleteAlert}>
                         Delete user
                 </Button>
