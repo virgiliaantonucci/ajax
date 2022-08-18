@@ -5,6 +5,7 @@ function EngLevel1() {
     const [engData, setEngData] = useState({});
     const [grData, setGrData] = useState({});
     const [levelData, setLevelData] = useState({});
+    const [answer, setAnswer] = useState({});
 
     useEffect(() => {
         fetch("/levels").then((response) => {
@@ -45,7 +46,10 @@ function EngLevel1() {
         });
     }, []);
 
-
+    function compare(e) {
+       e.preventDefault()
+        console.log(grData.includes(answer));
+    }
 
     return(
         <div>
@@ -55,8 +59,8 @@ function EngLevel1() {
             <p>
                 {engData.length>0 ? engData[0].walkthru : ""}
             </p>
-            <form>
-                <input type="text" />
+            <form onSubmit={e => compare(e)}>
+                <input placeholder="answer here" type="text" onChange={e => setAnswer(e.target.value)}/>
             </form>
         </div>
     )

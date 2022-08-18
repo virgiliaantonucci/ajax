@@ -4,6 +4,6 @@ class EngLevelsController < ApplicationController
     end
 
     def engtogr1
-        render json: EngLevel.first.gr_levels
+        render json: EngLevel.first.gr_levels.first.phrase
     end
 end
