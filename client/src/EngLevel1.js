@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 function EngLevel1() {
 
-    const [data, setData] = useState({});
-
+    const [engData, setEngData] = useState({});
+    const [grData, setGrData] = useState({});
     const [levelData, setLevelData] = useState({});
 
     useEffect(() => {
@@ -23,7 +23,7 @@ function EngLevel1() {
         fetch("/englevels").then((response) => {
         if (response.ok) {
             response.json().then((client) => {
-            setData(client);
+            setEngData(client);
             console.log(client);
             });
         } else {
@@ -32,13 +32,28 @@ function EngLevel1() {
         });
     }, []);
 
+    useEffect(() => {
+        fetch("/engtogr1").then((response) => {
+        if (response.ok) {
+            response.json().then((client) => {
+            setGrData(client);
+            console.log(client);
+            });
+        } else {
+            console.log("Not rendering!");
+        }
+        });
+    }, []);
+
+
+
     return(
         <div>
             <h2>
                 {levelData.length>0 ? levelData[0].name : ""}
             </h2>
             <p>
-                {data.length>0 ? data[0].walkthru : ""}
+                {engData.length>0 ? engData[0].walkthru : ""}
             </p>
             <form>
                 <input type="text" />

@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   #get "/levels", to: "levels#show"
   get "/englevels", to: "eng_levels#index"
   get "/grlevels", to: "gr_levels#index"
+  get "/engtogr1", to: "eng_levels#engtogr1"
 end
