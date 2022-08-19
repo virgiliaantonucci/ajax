@@ -19,7 +19,7 @@ function EngLevels() {
 
     return(
         <div>
-            <Button variant="outlined" style={{color:"#000000"}} onClick={handleEngLevel1}>Level 1
+            <Button className="lvl1" variant="outlined" style={{color:"#000000"}} onClick={handleEngLevel1}>Level 1
             </Button>
             <Button variant="outlined" style={{color:"#000000"}} onClick={handleEngLevel2}>Level 2
             </Button>

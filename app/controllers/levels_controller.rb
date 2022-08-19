@@ -8,7 +8,8 @@ class LevelsController < ApplicationController
     end
 
     def update
-        levelData = find_level
+        # levelData = find_level
+        levelData = Level.find_by(name: params[:name])
         updatedLevel = levelData.update!(is_completed: true)
         render json: updatedLevel
     end

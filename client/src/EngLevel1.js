@@ -59,13 +59,21 @@ function EngLevel1() {
         if (grData.includes(answer)) {
             result2 = "Correct!"
 
-            fetch("/updatelevels/Level_1").then((response) => {
+            fetch("/updatelevels/Level_1",{
+                method: "PATCH",
+                headers:{'Content-Type': 'application/json'},
+                body: JSON.stringify({"is_completed": true})
+            }).then((response) => {
                 if (response.ok) {
                     response.json().then((client) => {
                         console.log(client);
                     })
                 }
             })
+
+            // const btn = document.getElementsByClassName("lvl1");
+            // btn.color = "success";
+            // console.log(btn)
         }
 
         else{
