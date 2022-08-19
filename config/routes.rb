@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   #delete "/delete", to: "user#destroy"
   get "/levels", to: "levels#index"
+  patch "/updatelevels/:name", to: "levels#update"
   #get "/levels", to: "levels#show"
   get "/englevels", to: "eng_levels#index"
   get "/grlevels", to: "gr_levels#index"

@@ -58,7 +58,16 @@ function EngLevel1() {
         const element = document.getElementById("div1");
         if (grData.includes(answer)) {
             result2 = "Correct!"
+
+            fetch("/updatelevels/Level_1").then((response) => {
+                if (response.ok) {
+                    response.json().then((client) => {
+                        console.log(client);
+                    })
+                }
+            })
         }
+
         else{
             result2 = "Incorrect!"
         }
