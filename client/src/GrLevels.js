@@ -1,29 +1,21 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 
 function GrLevels() {
 
     const navigate = useNavigate();
 
-    function handleGrLevel1() {
-      navigate('/grlevels/grlevel1');
+    function handleGrLevel(levelNumber) {
+      navigate('/grlevels/'+levelNumber);
     }
   
-    function handleGrLevel2() {
-      navigate('/grlevels/grlevel2');
-    }
-
-    function handleGrLevel3() {
-        navigate('/grlevels/grlevel3');
-      }
-
     return(
         <div>
-            <Button variant="outlined" style={{color:"#000000"}} onClick={handleGrLevel1}>Level 1
+            <Button variant="outlined" style={{color:"#000000"}} onClick={function(){handleGrLevel(1)}}>Level 1
             </Button>
-            <Button variant="outlined" style={{color:"#000000"}} onClick={handleGrLevel2}>Level 2
+            <Button variant="outlined" style={{color:"#000000"}} onClick={function(){handleGrLevel(2)}}>Level 2
             </Button>
-            <Button variant="outlined" style={{color:"#000000"}} onClick={handleGrLevel3}>Level 3
+            <Button variant="outlined" style={{color:"#000000"}} onClick={function(){handleGrLevel(3)}}>Level 3
             </Button>
         </div>
     )

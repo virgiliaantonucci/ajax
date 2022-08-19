@@ -5,25 +5,17 @@ function EngLevels() {
 
     const navigate = useNavigate();
 
-    function handleEngLevel1() {
-      navigate('/englevels/englevel1');
+    function handleEngLevel(levelNumber) {
+      navigate('/englevels/'+levelNumber);
     }
-  
-    function handleEngLevel2() {
-      navigate('/englevels/englevel2');
-    }
-
-    function handleEngLevel3() {
-        navigate('/englevels/englevel3');
-      }
 
     return(
         <div>
-            <Button className="lvl1" variant="outlined" style={{color:"#000000"}} onClick={handleEngLevel1}>Level 1
+            <Button className="lvl1" variant="outlined" style={{color:"#000000"}} onClick={function(){handleEngLevel(1)}}>Level 1
             </Button>
-            <Button variant="outlined" style={{color:"#000000"}} onClick={handleEngLevel2}>Level 2
+            <Button variant="outlined" style={{color:"#000000"}} onClick={function(){handleEngLevel(2)}}>Level 2
             </Button>
-            <Button variant="outlined" style={{color:"#000000"}} onClick={handleEngLevel3}>Level 3
+            <Button variant="outlined" style={{color:"#000000"}} onClick={function(){handleEngLevel(3)}}>Level 3
             </Button>
         </div>
     )

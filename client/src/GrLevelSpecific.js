@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
+import { useParams} from "react-router-dom"
 
-function EngLevel1() {
+function GrLevelSpecific() {
 
-    const [engData, setEngData] = useState({});
     const [grData, setGrData] = useState({});
+    const [engData, setEngData] = useState({});
     const [levelData, setLevelData] = useState({});
     const [answer, setAnswer] = useState({});
+    const {levelNumber} = useParams()
 
     useEffect(() => {
         fetch("/levels").then((response) => {
@@ -21,10 +23,10 @@ function EngLevel1() {
     }, []);
 
     useEffect(() => {
-        fetch("/englevels").then((response) => {
+        fetch("/grlevels").then((response) => {
         if (response.ok) {
             response.json().then((client) => {
-            setEngData(client);
+            setGrData(client);
             console.log(client);
             });
         } else {
@@ -34,10 +36,10 @@ function EngLevel1() {
     }, []);
 
     useEffect(() => {
-        fetch("/engtogr1").then((response) => {
+        fetch("/grtoeng1").then((response) => {
         if (response.ok) {
             response.json().then((client) => {
-            setGrData(client);
+            setEngData(client);
             console.log(client);
             });
         } else {
@@ -56,10 +58,10 @@ function EngLevel1() {
         result.setAttribute('id','pp');
         let result2 = ''
         const element = document.getElementById("div1");
-        if (grData.includes(answer)) {
+        if (engData.includes(answer)) {
             result2 = "Correct!"
 
-            fetch("/updatelevels/Level_1",{
+            fetch("/updatelevels/Level_"+levelNumber,{
                 method: "PATCH",
                 headers:{'Content-Type': 'application/json'},
                 body: JSON.stringify({"is_completed": true})
@@ -86,10 +88,10 @@ function EngLevel1() {
     return(
         <div id="div1">
             <h2>
-                {levelData.length>0 ? levelData[0].name : ""}
+                {levelData.length>0 ? levelData.find(x=>x.id==levelNumber).name : ""}
             </h2>
             <p>
-                {engData.length>0 ? engData[0].walkthru : ""}
+                {grData.length>0 ? grData.find(x=>x.id==levelNumber).walkthru : ""}
             </p>
             <form onSubmit={e => compare(e)}>
                 <input placeholder="answer here" type="text" onChange={e => setAnswer(e.target.value)}/>
@@ -97,4 +99,4 @@ function EngLevel1() {
         </div>
     )
 }
-export default EngLevel1
+export default GrLevelSpecific
