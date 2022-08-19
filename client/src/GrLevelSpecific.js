@@ -36,7 +36,7 @@ function GrLevelSpecific() {
     }, []);
 
     useEffect(() => {
-        fetch("/grtoeng1").then((response) => {
+        fetch("/grtoeng/"+levelNumber).then((response) => {
         if (response.ok) {
             response.json().then((client) => {
             setEngData(client);

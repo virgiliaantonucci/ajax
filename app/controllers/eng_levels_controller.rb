@@ -3,8 +3,9 @@ class EngLevelsController < ApplicationController
         render json: EngLevel.all
     end
 
-    def engtogr1
-        render json: EngLevel.first.gr_levels.first.phrase
+    def engtogr
+        currentEngLevel = EngLevel.find_by(id: params[:id])
+        render json: currentEngLevel.gr_levels.first.phrase
     end
 
 end

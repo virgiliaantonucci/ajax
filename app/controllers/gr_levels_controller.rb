@@ -3,7 +3,8 @@ class GrLevelsController < ApplicationController
         render json: GrLevel.all
     end
 
-    def grtoeng1
-        render json: GrLevel.first.eng_levels.first.phrase
+    def grtoeng
+        currentGrLevel = GrLevel.find_by(id: params[:id])
+        render json: currentGrLevel.eng_levels.first.phrase
     end
 end
