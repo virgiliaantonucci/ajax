@@ -45,7 +45,7 @@ Type out either one of them."
 #level 1
 GrLevel.create!(
 phrase: ["vios", "zoi"],
-walkthru: "The English word for vios is life, lifespan, or quality of life. Type out the English translation of vios"
+walkthru: "The English word for vios is life, lifespan, or quality of life. Type out the English translation of vios."
 )
 # GrLevel.create(
 # phrase: "Hades",

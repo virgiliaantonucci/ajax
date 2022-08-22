@@ -72,10 +72,6 @@ function EngLevelSpecific() {
                     })
                 }
             })
-
-            // const btn = document.getElementsByClassName("lvl1");
-            // btn.color = "success";
-            // console.log(btn)
         }
 
         else{

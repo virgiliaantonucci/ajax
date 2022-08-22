@@ -11,6 +11,7 @@ import GrLevels from "./GrLevels"
 import EngLevels from "./EngLevels"
 import EngLevelSpecific from "./EngLevelSpecific"
 import GrLevelSpecific from "./GrLevelSpecific"
+import Ajax from "./ajax.png"
 
 function App() {
 
@@ -59,6 +60,7 @@ function App() {
         <Route path="/grlevels/:levelNumber" element={<GrLevelSpecific user={user}/>} />
         <Route exact path="/" element={<Home user={user}/>} />
        </Routes>
+       <img src={Ajax} alt="Ajax"></img>
     </div>
   );
 }
