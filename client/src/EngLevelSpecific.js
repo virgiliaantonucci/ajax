@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams} from "react-router-dom"
+import Athena from "./athena.png"
 
 function EngLevelSpecific() {
 
@@ -92,6 +93,7 @@ function EngLevelSpecific() {
             <form onSubmit={e => compare(e)}>
                 <input placeholder="answer here" type="text" onChange={e => setAnswer(e.target.value)}/>
             </form>
+            <img src={Athena} alt="Athena"></img>
         </div>
     )
 }

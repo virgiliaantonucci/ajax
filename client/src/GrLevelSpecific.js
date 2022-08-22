@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams} from "react-router-dom"
+import Ares from "./ares.png"
 
 function GrLevelSpecific() {
 
@@ -72,10 +73,6 @@ function GrLevelSpecific() {
                     })
                 }
             })
-
-            // const btn = document.getElementsByClassName("lvl1");
-            // btn.color = "success";
-            // console.log(btn)
         }
 
         else{
@@ -96,6 +93,7 @@ function GrLevelSpecific() {
             <form onSubmit={e => compare(e)}>
                 <input placeholder="answer here" type="text" onChange={e => setAnswer(e.target.value)}/>
             </form>
+            <img src={Ares} alt="Ares"></img>
         </div>
     )
 }
