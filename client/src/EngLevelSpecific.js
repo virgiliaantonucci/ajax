@@ -84,7 +84,7 @@ function EngLevelSpecific() {
 
     return(
         <div>
-            <div id="div1">
+            <div id="div1" style={{whiteSpace: "pre-line"}}>
                 <h2>
                     {levelData.length>0 ? levelData.find(x=>x.id==levelNumber).name : ""}
                 </h2>
