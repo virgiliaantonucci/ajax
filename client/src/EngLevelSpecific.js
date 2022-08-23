@@ -83,17 +83,21 @@ function EngLevelSpecific() {
     }
 
     return(
-        <div id="div1">
-            <h2>
-                {levelData.length>0 ? levelData.find(x=>x.id==levelNumber).name : ""}
-            </h2>
-            <p>
-                {engData.length>0 ? engData.find(x=>x.id==levelNumber).walkthru : ""}
-            </p>
-            <form onSubmit={e => compare(e)}>
-                <input placeholder="answer here" type="text" onChange={e => setAnswer(e.target.value)}/>
-            </form>
-            <img src={Athena} alt="Athena"></img>
+        <div>
+            <div id="div1">
+                <h2>
+                    {levelData.length>0 ? levelData.find(x=>x.id==levelNumber).name : ""}
+                </h2>
+                <p>
+                    {engData.length>0 ? engData.find(x=>x.id==levelNumber).walkthru : ""}
+                </p>
+                <form onSubmit={e => compare(e)}>
+                    <input placeholder="answer here" type="text" onChange={e => setAnswer(e.target.value)}/>
+                </form>
+            </div>
+            <div>
+                <img src={Athena} alt="Athena"></img>
+            </div>
         </div>
     )
 }

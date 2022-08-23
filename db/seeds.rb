@@ -36,7 +36,7 @@ walkthru: "Let's learn a greeting. The phrase be healthy can be translated as ou
 #level 3
 EngLevel.create!(
 phrase: ["Marcus gives the rulers the child of Piso.", "Marcus gives the rulers Piso’s child.", "Marcus gives Piso’s child to the rulers."],
-walkthru: "Different parts of speech can be placed in different orders in greek. Both of these are correct translations of Marcus gives the rulers the child of Piso:
+walkthru: "Different parts of speech can be placed in different orders in greek. Both of these are correct translations below of Marcus gives the rulers the child of Piso.
 \r\n o Markos didosi tois arcousi ton tou Peisonos paida.
 \r\n o Markos didosi tois arcousi ton paida tou Peisonos.
 \r\n Type out either one of them."
@@ -65,11 +65,11 @@ walkthru: "The English word for Hygíaine is good health or be healthy. Type out
 #level 3
 GrLevel.create!(
 phrase: ["o Markos didosi tois arcousi ton tou Peisonos paida.", "o Markos didosi tois arcousi ton paida tou Peisonos."],
-walkthru: "o Markos didosi tois arcousi ton tou Peisonos paida can be translated a couple different ways. Here are some:
+walkthru: "o Markos didosi tois arcousi ton tou Peisonos paida can be translated a couple different ways. Here are some below.
 \r\n Marcus gives the rulers the child of Piso.
 \r\n Marcus gives the rulers Piso’s child.
 \r\n Marcus gives Piso’s child to the rulers.
-\r\n Type one of the translations below."
+\r\n Type one of the translations."
 )
 
 #level 1
