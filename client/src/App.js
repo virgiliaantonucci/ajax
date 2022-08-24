@@ -37,6 +37,19 @@ function App() {
       setUser(null);
       console.log(null)
       localStorage.clear()
+
+      for (let i = 1; i < 4; i++) {
+        fetch("/reset/Level_"+i,{
+          method: "PATCH",
+          headers:{'Content-Type': 'application/json'},
+        }).then((response) => {
+            if (response.ok) {
+                response.json().then((client) => {
+                    console.log(client);
+                })
+            }
+        })
+      }
     }
 
     function deleteUser() {

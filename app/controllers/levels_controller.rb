@@ -14,6 +14,13 @@ class LevelsController < ApplicationController
         render json: updatedLevel
     end
 
+    def reset
+        # levelData = find_level
+        reset = Level.find_by(name: params[:name])
+        updatedReset = reset.update!(is_completed: false)
+        render json: updatedReset
+    end
+
     private
 
     def find_level

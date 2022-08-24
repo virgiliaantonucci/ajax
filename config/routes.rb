@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   #delete "/delete", to: "user#destroy"
   get "/levels", to: "levels#index"
   patch "/updatelevels/:name", to: "levels#update"
+  patch "/reset/:name", to: "levels#reset"
   #get "/levels", to: "levels#show"
   get "/englevels", to: "eng_levels#index"
   get "/grlevels", to: "gr_levels#index"
